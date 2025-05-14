@@ -1,23 +1,31 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BinaryConverter
+namespace Binary
 {
     public static class BinaryToDecimal
     {
         public static void Run()
         {
-            Console.WriteLine("Binary to Decimal Converter");
-            ConvertBinaryToDecimal("01111111.00000000.00000000.00000001");
-        }
+            while (true)
+            {
+                Console.WriteLine("Indtast et binært nummer:");
+                string binaryInput = Console.ReadLine()!.Replace(" ", "");
 
-        public static string ConvertBinaryToDecimal(string binary)
-        {
-            Console.WriteLine($"Example: {binary} => 127.0.0.1");
-            return "127.0.0.1";
+                int decimalValue = 0;
+                int power = 0;
+
+                // Læs binært tal bagfra
+                for (int i = binaryInput.Length - 1; i >= 0; i--)
+                {
+                    if (binaryInput[i] == '1')
+                    {
+                        decimalValue += (int)Math.Pow(2, power);
+                    }
+                    power++;
+                }
+
+                Console.WriteLine($"Decimal-tallet er: {decimalValue}\n");
+            }
         }
     }
 }

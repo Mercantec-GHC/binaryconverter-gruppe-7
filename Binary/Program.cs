@@ -1,4 +1,6 @@
-﻿namespace BinaryConverter
+﻿using Binary;
+
+namespace BinaryConverter
 {
     internal class Program
     {
