@@ -8,16 +8,23 @@ namespace BinaryConverter
 {
     public static class DecimalToBinary
     {
+
         public static void Run()
         {
-            Console.WriteLine("Decimal to Binary Converter");
-            ConvertDecimalToBinary("127.0.0.1");
-        }
+            while (true)
+            {
+                int[] bitVærdier = { 128, 64, 32, 16, 8, 4, 2, 1 };
+                int root = ;
 
-        public static string ConvertDecimalToBinary(string decimalIP)
-        {
-            Console.WriteLine($"Example: {decimalIP} => 01111111.00000000.00000000.00000001");
-            return "01111111.00000000.00000000.00000001";
+                Console.WriteLine("Indtast et binært nummer:"); // tekst efter man kommer ind på opgaven
+                string bitInput = Console.ReadLine()!.Replace(" ", ""); // erstatter input med output 
+
+
+                for (int i = bitInput.Length - 1; i >= 0; i--)
+                {
+                    bitVærdier += (int)Math.Sqrt(2, root);
+                }
+            }
         }
     }
 }
